@@ -16,3 +16,32 @@ $(document).ready(function(){
         }
     });
 });
+
+document.querySelectorAll('.btnEliminar').forEach(function(boton){
+boton.addEventListener('click' , function(){
+    Swal.fire({
+        title: 'Estas seguro?',
+        text: 'Usuario eliminado',
+        icon: 'warning',
+        showCancelButton :true,
+        confirmButtonColor:'#DD403A',
+        cancelButtonText:'Si, eliminar',
+        confirmButtonText:'Cancelar',
+       
+    }).then((result)=>{
+       if(result.isConfirmed){
+ 
+        Swal.fire({
+            icon:'success',
+            title:'Eliminado',
+            text:'El usuario fue eliminado correctamente',
+              confirmButtonColor:'#DD403A'
+ 
+        });
+    }
+});
+ 
+});
+ 
+});
+ 

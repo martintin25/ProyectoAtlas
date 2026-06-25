@@ -24,7 +24,7 @@ document
       return;
     }
 
-    if (email === "admin@maskot.com" && password === "12345") {
+    if (email === 'admin@maskot.com' && password === '12345') {
       Swal.fire({
         icon: "success",
         title: "Inicio Exitoso",
@@ -33,7 +33,18 @@ document
       }).then(() => {
         window.location.href = "Administrador/dashboard.html";
       });
-    } else {
+    }else if(email === 'cliente@maskot.com' && password ==='123456') {
+       Swal.fire({
+        icon: "success",
+        title: "Inicio Exitoso",
+        text: "Bienvenido Cliente",
+        confirmButtonColor: "#DD403A",
+      }).then(()=>{
+        window.location.href = 'Cliente/cliente.html';
+      });
+
+      
+    }else {
       Swal.fire({
         icon: "error",
         title: "Credenciales incorrectas",
